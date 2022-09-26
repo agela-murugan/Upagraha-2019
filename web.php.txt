@@ -1,0 +1,164 @@
+?><!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Manjari', sans-serif;
+  background-color: black;
+  color:white;
+  background-image:url(pictures/registerbg.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:3px solid grey;
+  
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div id="form-wrapper" style="max-width:500px;margin:auto;">
+        <div id="error"><? echo $error.$successMessage; ?></div>
+    <form action="linking.php" method="POST">
+  <div class="container">
+    <h1>REGISTRATION FORM</h1>
+    <p>Please fill in this form to enroll in the events.</p>
+    <hr>
+
+    <label for="name"><b> Student Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+    
+    <label for="clg_name"><b>College Name</b></label>
+    <input type="text" placeholder="Enter College Name" name="clg_name" required>
+    
+    <label for="gender"><b>Gender</b></label>&nbsp;&nbsp;&nbsp;
+   Male &nbsp; <input type="radio" name="gender" value="m" required>&nbsp;&nbsp;&nbsp;
+   Female &nbsp; <input type="radio" name="gender" value="f" required>&nbsp;&nbsp;&nbsp;
+   Others &nbsp; <input type="radio" name="gender" value="o" required>
+   <br><br><br>
+
+    <label for="dept"><b>Department</b></label>
+     <select name="dept">
+	       <option selected hidden >---Select---</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="CSE">CSE</option>
+           <option value="IT">IT</option>
+          <option value="MECH">MECH</option>
+          <option value="CIVIL">CIVIL</option>
+          <option value="BIOTECH">BIOTECH</option>
+          <option value="others">Others</option>
+        required
+      </select><br><br><br>
+        
+
+    <label for="year"><b>Year</b></label>
+    <select name="year">
+	    <option selected hidden >---Select---</option>
+       <option value="1st year">1st year</option>
+       <option value="2nd year">2nd year</option>
+       <option value="3rd year">3rd year</option>
+       <option value="4th year">4th year</option>
+       required
+     </select><br><br><br>
+    
+     <label for="events"><b>Event</b></label>
+     <select name="events">
+	       <option selected hidden >---Select---</option>
+          <option value="techquizz">TECH QUIZZ</option>
+          <option value="paperpresentation">PAPER PRESENTATION</option>
+          <option value="linefollowerbot">LINE FOLLOWER BOT</option>
+           <option value="code2duo">CODE 2 DUO </option>
+          <option value="techjam"> TECH JAM</option>
+          <option value="circuitrix">CIRCUITRIX</option>
+          
+        required
+      </select><br><br><br>
+    
+    
+    
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="Enter City" name="city" required>
+    
+    <label for="state"><b>State</b></label>
+    <input type="text" placeholder="Enter State" name="state" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="mobile_no"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter mobile no" name="mobile_no" required>
+    
+    
+    <hr>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  
+</form>
+</div>
+</body>
+</html>

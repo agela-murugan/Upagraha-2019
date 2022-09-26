@@ -1,0 +1,7 @@
+Dear <name>,
+
+Thank you for registering in <name of the events>! Your unique identification number will be <ID number from the table>. Please use this as a proof of your registration on the day of the symposium! Be there on time, good luck and have some fun! ;)
+
+Regards,
+
+The Web Dev Team.
